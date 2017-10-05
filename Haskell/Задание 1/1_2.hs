@@ -6,9 +6,11 @@ sinus x =
 
 --НОД двух целых чисел
 nod :: Integer -> Integer -> Integer
+nod 0 0 = error "Not defined"
 nod a b | (a < 0 || b < 0) = nod (abs a) (abs b)
-	| a < b = nod b a
-	| a >= b = if (a `mod` b == 0) then b else nod b (a `mod` b)
+		| a < b = nod b a
+		| b == 0 = a
+		| a >= b = if (a `mod` b == 0) then b else nod b (a `mod` b)
 
 --Возведение целого числа в целую степень
 pow :: Integer -> Integer -> Double
