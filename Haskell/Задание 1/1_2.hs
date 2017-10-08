@@ -27,4 +27,4 @@ powN :: Integer -> Integer -> Integer
 powN m n | n == 0 = 1
 	 | m == 0 = 0
 	 | n `mod` 2 == 1 = m * powN m (n - 1)
-	 | n `mod` 2 == 0 = powN (m * m) (n `div` 2)
+	 | n `mod` 2 == 0 = powN (m * m) (n `div` 2) 
