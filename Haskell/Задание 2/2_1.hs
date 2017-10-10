@@ -69,7 +69,7 @@ listFromTree binTree =
 --listFromTree binTree = 
 --	let iter list [] = list;
 --		iter list (h : t) = case h of
---			EmptyTree 		-> iter list t
---			(Leaf k) 		-> iter (k : list) t
+--			EmptyTree 	-> iter list t
+--			(Leaf k) 	-> iter (k : list) t
 --			(Node k l r)	-> iter (k : list) (t ++ [l] ++ [r]) in
---    reverse (iter [] [binTree])
+--    	reverse (iter [] [binTree])
