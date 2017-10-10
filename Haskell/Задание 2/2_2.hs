@@ -39,10 +39,10 @@ reverse list = foldl act [] list
 elementAt :: Integer -> [a] -> a  
 elementAt _ [] = error "List is empty"
 elementAt index list | index < 0 = error "Index is out of bounds of list"
-					 | index == 0 = head list
-					 | otherwise = checkRes (foldl (\ lst el -> tail lst) list [1..index])
+		     | index == 0 = head list
+		     | otherwise = checkRes (foldl (\ lst el -> tail lst) list [1..index])
 	where checkRes res = case res of 
-		[] -> error "Index is out of bounds of list"
+		[] 	-> error "Index is out of bounds of list"
 		(h : t) -> h 
 
 indexOf :: String -> [String] -> Integer  
