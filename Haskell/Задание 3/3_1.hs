@@ -27,8 +27,8 @@ wpnToInt x = case x of
 
 intToWpn :: Integer -> WeirdPeanoNumber
 intToWpn x | x == 0 = Zero
-		   | x < 0 = Pred (intToWpn (x + 1))
-		   | x > 0 = Succ (intToWpn (x - 1))
+	   | x < 0 = Pred (intToWpn (x + 1))
+	   | x > 0 = Succ (intToWpn (x - 1))
  	
 instance Eq WeirdPeanoNumber where
 	(==) x y = eq (simplify x) (simplify y) where 
